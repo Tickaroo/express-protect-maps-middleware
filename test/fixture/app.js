@@ -12,9 +12,10 @@ module.exports = function(htaccess){
       var user = auth(req);
       if (!user || user.name !== userName || user.pass !== userPass) {
         res.set('WWW-Authenticate', 'Basic realm="example"');
-        var err = new Error()
+        var err = new Error();
         err.status = 401;
         next(err);
+        return;
       }
       next();
     });
@@ -51,4 +52,4 @@ module.exports = function(htaccess){
   });
 
   return app;
-}
+};
