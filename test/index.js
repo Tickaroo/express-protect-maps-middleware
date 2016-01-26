@@ -32,8 +32,17 @@ describe('express-protect-maps-middleware', function() {
       });
     });
 
-    it('should block', function(done) {
+    it('should block hackers', function(done) {
       return superagent.get('http://localhost:1234/assets/some.js.map').end(function(err, res){
+        expect(res.statusCode).to.equal(403);
+        expect(res.headers['cache-control']).to.equal('private, no-cache, no-store, must-revalidate');
+        expect(res.text).to.equal('Errorundefined403');
+        done();
+      });
+    });
+
+    it('should block', function(done) {
+      return superagent.get('http://localhost:1234/assets/some.js.map?hacked').end(function(err, res){
         expect(res.statusCode).to.equal(403);
         expect(res.headers['cache-control']).to.equal('private, no-cache, no-store, must-revalidate');
         expect(res.text).to.equal('Errorundefined403');
