@@ -1,0 +1,39 @@
+{
+  "name": "express-protect-maps-middleware",
+  "version": "1.0.0",
+  "description": "express middleware that prevents access to sourcemap files",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "lint": "jshint **.js **/*.js",
+    "coverage": "istanbul cover node_modules/.bin/_mocha",
+    "cobertura": "istanbul report cobertura"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Tickaroo/express-protect-maps-middleware.git"
+  },
+  "devDependencies": {
+    "basic-auth": "^1.0.3",
+    "chai": "^3.3.0",
+    "express": "^4.13.3",
+    "istanbul": "^0.4.0",
+    "jshint": "^2.9.1",
+    "mocha": "^2.2.1",
+    "superagent": "^1.7.1"
+  },
+  "keywords": [
+    "request",
+    "request-ajax",
+    "cache"
+  ],
+  "author": "Anton Pawlik <anton.pawlik@gmail.com> (http://antpaw.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tickaroo/express-protect-maps-middleware/issues"
+  },
+  "homepage": "https://github.com/Tickaroo/express-protect-maps-middleware#readme"
+}
