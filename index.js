@@ -23,7 +23,7 @@ module.exports = function(safeIps, scopeDir) {
         resetCache(res);
 
         if ( ! isIp(req, safeIps)) {
-          var err = new Error();
+          var err = new Error('sourcemap file access denied');
           err.status = 403;
           next(err);
           return;
