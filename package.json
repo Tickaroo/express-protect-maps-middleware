@@ -9,8 +9,7 @@
   "scripts": {
     "test": "mocha",
     "lint": "jshint **.js **/*.js",
-    "coverage": "istanbul cover node_modules/.bin/_mocha",
-    "cobertura": "istanbul report cobertura"
+    "coverage": "istanbul cover node_modules/.bin/_mocha"
   },
   "repository": {
     "type": "git",
@@ -18,12 +17,13 @@
   },
   "devDependencies": {
     "basic-auth": "^1.0.3",
-    "chai": "^3.3.0",
+    "chai": "^3.5.0",
+    "codecov.io": "^0.1.6",
     "express": "^4.13.3",
     "istanbul": "^0.4.0",
     "jshint": "^2.9.1",
-    "mocha": "^2.2.1",
-    "superagent": "^1.7.1"
+    "mocha": "^2.4.5",
+    "superagent": "^1.7.2"
   },
   "keywords": [
     "request",
