@@ -2,7 +2,7 @@ var auth = require('basic-auth');
 var express = require('express');
 var mapsMiddleware = require('../../');
 
-module.exports = function(htaccess){
+module.exports = function(htaccess, testString, noIp){
   var app = express();
 
   if (htaccess) {
@@ -26,7 +26,15 @@ module.exports = function(htaccess){
     next();
   });
 
-  app.use(mapsMiddleware(['your.company.ip', 'error.monitoring.service.ip'], '/assets/'));
+  if (testString) {
+    app.use(mapsMiddleware('string.company.ip', '/assets/'));
+  }
+  else if (noIp) {
+    app.use(mapsMiddleware(false, '/assets/'));
+  }
+  else {
+    app.use(mapsMiddleware(['your.company.ip', 'error.monitoring.service.ip'], '/assets/'));
+  }
 
   app.get('/', function(req, res, next){
     res.send('home');

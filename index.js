@@ -1,6 +1,16 @@
 function isIp(req, safeIps) {
   var clientIp = req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || req.ip;
-  return clientIp && safeIps && safeIps.indexOf(clientIp) !== -1;
+  if (clientIp && safeIps) {
+    if (typeof safeIps === 'string') {
+      return clientIp.indexOf(safeIps) !== -1;
+    }
+    for (var i = 0; i < safeIps.length; i++) {
+      if (clientIp.indexOf(safeIps[i]) !== -1) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 function resetCache(res) {
