@@ -1,4 +1,5 @@
-# express-protect-maps-middleware [![npm version](https://badge.fury.io/js/express-protect-maps-middleware.svg)](https://www.npmjs.com/package/express-protect-maps-middleware) [![Build Status](https://travis-ci.org/Tickaroo/express-protect-maps-middleware.svg?branch=master)](https://travis-ci.org/Tickaroo/express-protect-maps-middleware) [![codecov.io](https://codecov.io/github/Tickaroo/express-protect-maps-middleware/coverage.svg?branch=master)](https://codecov.io/github/Tickaroo/express-protect-maps-middleware?branch=master)
+# express-protect-maps-middleware
+[![npm version](https://badge.fury.io/js/express-protect-maps-middleware.svg)](https://www.npmjs.com/package/express-protect-maps-middleware) [![Build Status](https://travis-ci.org/Tickaroo/express-protect-maps-middleware.svg?branch=master)](https://travis-ci.org/Tickaroo/express-protect-maps-middleware) [![codecov.io](https://codecov.io/github/Tickaroo/express-protect-maps-middleware/coverage.svg?branch=master)](https://codecov.io/github/Tickaroo/express-protect-maps-middleware?branch=master)
 
 express middleware that prevents access to sourcemap files
 
